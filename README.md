@@ -62,7 +62,7 @@ If you are using the _AppSensor_ for running research studies and think about pu
 You might also be interested in the following publications if you are studying mobile application usage. Some of them are based on the _AppSensor_:
 * Luis A. Leiva, Matthias Böhmer, Sven Gehring, Antonio Krüger. _Back to the App: The Costs of Mobile Application Interruptions_. In: Proceedings of MobileHCI ’12, San Francisco 2012, USA.
 * Matthias Böhmer, Antonio Krüger. A Study on Icon Arrangement by Smartphone Users. In: Proceedings of CHI ’13. Paris 2013, France.
-* Abhinav Parate, Matthias Böhmer, David Chu, Deepak Ganesan, Benjamin Marlin. _Practical Prediction and Prefetch for Faster Access to Applications on Mobile phones_. In: Proceedings of UbiComp ’13. Zürich 2013, Switzerland. (to appear)
+* Abhinav Parate, Matthias Böhmer, David Chu, Deepak Ganesan, Benjamin Marlin. _Practical Prediction and Prefetch for Faster Access to Applications on Mobile phones_. In: Proceedings of UbiComp ’13. Zürich 2013, Switzerland.
 * Matthias Böhmer, Lyubomir Ganev, Antonio Krüger. _AppFunnel: A Framework for Usage-centric Evaluation of Recommender Systems that Suggest Mobile Applications_. In: Proceedings of IUI ’13. Santa Clara 2013, USA.
 
 ### Related Work
