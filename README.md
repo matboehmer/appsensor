@@ -41,15 +41,24 @@ The user’s application usage is sampled as a sequence of events, i.e. every us
 ## Persisting of Events 
 
 ### In-memory Caching
-
 The _AppSensor_ is currently being sampled with a frequency of 2Hz, i.e. every 500ms we capture which application is currently running. Whenever we observe a different application, we create a new event of type app usage for the current app. The _AppSensor_ starts observing app usage when device is unlocked / waked up from stand-by / screen is turned on.
 
 To save battery and for better performance, this real-time data is saved in memory. Most of the attributes of an event are determined when an application is started (e.g. package name, type, location). Some pieces of information are constantly being used to update the event, e.g. usage time and device orientation.
 
 ### Local DB
-
 Every time the device goes into stand-by mode, i.e. when the screen turns off, we write all data from memory into a local MySQLite database on the Android device. Further, the _AppSensor_ stops sampling app usage since the user cannot use any app when the device is locked.
 
 ### Server Upload
-
 Synchronization with the server is done via the Android sync manager. The data is send as a CSV file, where all redundant fields are blanked to save bandwidth. On the server side, a PHP script receives the CSV file as HTTP POST. It reads the file and writes all data fields into a dedicated table of a MySQL database. Before uploading, such values that are constant but device-specific are added to the event, e.g. screen resolution or device model.
+
+## AppSensor for Research
+
+If you are using the _AppSensor_ for running research studies and think about publishing your results, you should cite the following paper as a reference for _AppSensor_:
+
+* Matthias Böhmer, Brent Hecht, Johannes Schöning, Antonio Krüger, Gernot Bauer: _Falling Asleep with Angry Birds, Facebook and Kindle – A Large Scale Study on Mobile Application Usage_. In: Proceedings of Mobile HCI 2011. Stockholm 2011, Sweden.
+
+You might also be interested in the following publications if you are studying mobile application usage. Some of them are based on the _AppSensor_:
+* Luis A. Leiva, Matthias Böhmer, Sven Gehring, Antonio Krüger. _Back to the App: The Costs of Mobile Application Interruptions_. In: Proceedings of MobileHCI ’12, San Francisco 2012, USA.
+* Matthias Böhmer, Antonio Krüger. A Study on Icon Arrangement by Smartphone Users. In: Proceedings of CHI ’13. Paris 2013, France.
+* Abhinav Parate, Matthias Böhmer, David Chu, Deepak Ganesan, Benjamin Marlin. _Practical Prediction and Prefetch for Faster Access to Applications on Mobile phones_. In: Proceedings of UbiComp ’13. Zürich 2013, Switzerland. (to appear)
+* Matthias Böhmer, Lyubomir Ganev, Antonio Krüger. _AppFunnel: A Framework for Usage-centric Evaluation of Recommender Systems that Suggest Mobile Applications_. In: Proceedings of IUI ’13. Santa Clara 2013, USA.
