@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">appsensor</string>
+    <string name="contentAuthority">de.dfki.appsensor</string>
+    <string name="provider_appusage_label">app usage</string>
+</resources>
